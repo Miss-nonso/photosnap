@@ -36,7 +36,7 @@ Photosnap is a photography-focused platform that highlights the beauty and power
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/photosnap.git
+   git clone https://github.com/Miss-nonso/photosnap.git
    ```
 
 2. **Install Dependencies:**
