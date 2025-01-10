@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Photosnap Project
 
-## Getting Started
+Welcome to the **Photosnap Project**, a creative and audacious take on building a visually striking and responsive multi-page website for a fictional photography service. This project is designed to deliver a polished, professional-grade product.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Project Overview**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Photosnap is a photography-focused platform that highlights the beauty and power of visual storytelling. The project involves creating a responsive, feature-rich website that includes:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- A captivating **Landing Page** to draw in users.
+- An engaging **Stories Page** to showcase the stories of Photosnap.
+- A sleek **Features Page** to showcase service highlights.
+- A detailed **Pricing Page** with tiered plans and an interactive toggle.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Key Features**
 
-To learn more about Next.js, take a look at the following resources:
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- **Reusable Components:** Built with clean and modular design principles.
+- **Interactive UI Elements:** Includes dynamic pricing toggles and smooth navigation.
+- **Accessibility Focus:** Designed to ensure inclusivity for all users.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Tech Stack**
 
-## Deploy on Vercel
+- **Frontend:** HTML, Tailwind CSS, shadcn UI, and Nextjs.
+- **Deployment:** Hosted on platforms like Netlify.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **How to Use**
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/photosnap.git
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for Production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## **Project Goals**
+
+The Photosnap project is a creative journey meant to:
+
+- Explore engaging design principles.
+- Focus on user-centric experiences that emphasize storytelling.
+- Challenge my ability to implement responsive and accessible web solutions.

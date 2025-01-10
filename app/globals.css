@@ -1,21 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "DM Sans", serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --black: #000;
+    --white: #fff;
+    ---lightGrey: #dfdfdf;
+    --overlayGrey: #979797;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+header {
+  @apply flex justify-between items-center p-4 px-8 h-[4.5rem] w-full bg-white md:justify-around;
+}
+
+.mobile-menu-trigger {
+  @apply md:hidden;
+}
+
+.nav-menu,
+.nav-btn {
+  @apply hidden md:flex;
+}
+
+.arr-link {
+  @apply flex gap-4 uppercase tracking-[2px] text-[12px] items-center;
+}
+
+.arr-link:hover {
+  @apply gap-5;
+}
+
+.image-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full bg-black min-h-[375px] md:min-h-[500px];
+}
+
+.image-grid img {
+  @apply h-full w-full relative;
+}
+
+.grid-text {
+  @apply bg-black text-[var(--white)] grid place-content-center px-8 py-20 w-[100%] md:w-[65%] lg:w-5/12;
+}
+
+/* .grid-text {
+  width: 42.36%;
+ 
+  } */
+
+.home-img1 {
+  @apply sm:h-[294px];
+  background: url(../public/assets/home/desktop/create-and-share.jpg);
+}
+
+.home-img2 {
+  background: url(../public/assets/home/desktop/beautiful-stories.jpg);
+}
+.home-img3 {
+  background: url(../public/assets/home/desktop/designed-for-everyone.jpg);
+}
+
+.home-grid-layout {
+  @apply flex flex-col-reverse md:flex-row md:flex lg:flex;
+}
+
+.home-layout-reverse {
+  @apply flex-col-reverse md:flex-row-reverse;
+}
+.grid-img {
+  @apply h-[271px] md:h-[40.625rem] w-full md:w-[35%] lg:w-7/12 py-[12rem];
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-text-content {
+  @apply lg:w-[24rem] grid gap-4;
+}
+.grid-text-content h2 {
+  @apply text-[32px] sm:tracking-[3.33px] md:text-[2.5rem] md:leading-[48px];
+}
+.grid-text-content p {
+  @apply text-[15px] leading-[25px] md:pr-0 opacity-60;
+}
+.img-wrapper {
+  @apply relative;
+}
+
+.img-overlay {
+  @apply bg-black opacity-30 absolute h-full w-full z-10;
+}
+
+.img-content {
+  @apply grid  w-full absolute z-20 bottom-0  px-10 text-white;
+  /* background: linear-gradient(var(--white), var(--overlayGrey)); */
+}
+
+.img-content .story-details {
+  @apply border-b  w-full py-4;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.img-content a {
+  @apply flex justify-between py-4 text-[12px] tracking-[2px];
+}
+
+.img-wrapper h6 {
+  @apply uppercase text-lg font-bold;
+}
+
+.img-wrapper .author {
+  @apply text-[13px] font-extralight tracking-normal;
+}
+
+.info-section {
+  @apply grid place-items-center w-full min-h-[500px];
+}
+
+.info-content {
+  @apply grid py-20 gap-[4rem]  items-center justify-center md:gap-[4rem]  text-center min-h-[236px] lg:flex lg:w-[80%] lg:gap-[2rem] 2xl:w-[75%] 2xl:gap-0 2xl:justify-between;
+}
+
+.info-content .info-item {
+  @apply grid place-items-center gap-0 md:gap-4 min-h-[236px];
+}
+
+.info-item .info-img-wrapper {
+  @apply min-h-[100px];
+}
+
+.info-item img {
+  @apply h-[100%];
+}
+
+.info-item .info-text {
+  @apply min-h-[116px] max-w-[350px];
+}
+
+.info-item h6 {
+  @apply text-[18px] font-bold pb-4;
+}
+.info-item p {
+  @apply text-[15px] leading-[25px];
+}
+
+footer {
+  @apply bg-[var(--black)] grid place-items-center lg:h-[250px] text-white w-full;
+}
+
+footer .footer-main-wrapper {
+  @apply py-10 grid w-[80%] 2xl:w-[75%] md:flex md:relative md:justify-between lg:flex lg:justify-between;
+}
+
+.footer-main-content {
+  @apply grid gap-8 place-items-center md:place-items-start  md:gap-2 lg:flex lg:gap-[8rem];
+}
+
+.footer-main-content ul {
+  @apply grid gap-4 text-center md:flex md:text-left md:gap-5 md:pb-20 lg:grid pt-3 text-[12px] tracking-[2px];
+}
+
+.footer-col1,
+.footer-col3 {
+  @apply grid gap-[1.5rem] md:gap-20 sm:place-items-center;
+}
+
+.footer-icons {
+  @apply flex justify-center gap-2 md:absolute md:bottom-8 lg:static;
+}
+
+.footer-col3 {
+  @apply pt-20 md:pt-0;
+}
+
+.footer-col3 small {
+  @apply text-center md:text-left opacity-50;
+}
+.footer-text-link-wrapper {
+  @apply flex justify-center md:justify-end w-full;
+}
+
+.grid-text-white {
+  background: white;
+  color: var(--black);
+}
+
+/* STORIES */
+
+.stories-hero-img {
+  @apply lg:h-[93vh] md:min-h-[650px];
+  background: url(../public/assets/stories/desktop/moon-of-appalacia.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stories-hero-overlay {
+  @apply h-[100vh] relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stories-hero-content-wrapper {
+  @apply text-white absolute top-[10rem] p-4 md:w-2/3 md:p-5 lg:w-1/2 lg:pl-[8rem] grid gap-4;
+}
+
+.stories-hero-content-wrapper h5 {
+  @apply text-[12px] font-bold tracking-[2px];
+}
+
+.stories-hero-content-wrapper h1 {
+  @apply text-[40px] leading-[48px] font-bold tracking-[4.17px];
+}
+
+.stories-hero-content-wrapper .date-and-author {
+  @apply text-[13px]  flex gap-[0.3rem] opacity-75;
+}
+.stories-hero-content-wrapper .date-and-author p {
+  @apply font-extralight;
+}
+
+.stories-hero-content-wrapper .date-and-author .author {
+  @apply opacity-100;
+}
+
+.stories-hero-content-wrapper .description {
+  @apply opacity-60 text-[15px] leading-[25px] lg:pr-16 2xl:pr-[9rem];
 }
