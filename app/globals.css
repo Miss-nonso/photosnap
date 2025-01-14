@@ -78,7 +78,7 @@ body {
 }
 
 header {
-  @apply flex justify-between items-center p-4 px-8 h-[4.5rem] w-full bg-white md:justify-around;
+  @apply flex justify-between items-center p-4 px-8 h-[4.5rem] w-full bg-white md:px-[4.1rem] md:justify-between;
 }
 
 .mobile-menu-trigger {
@@ -107,7 +107,7 @@ header {
 }
 
 .grid-text {
-  @apply bg-black text-[var(--white)] grid place-content-center px-8 py-20 w-[100%] md:w-[65%] lg:w-5/12;
+  @apply bg-black text-[var(--white)] grid place-content-center px-8 py-20 w-[100%] md:w-[65%] lg:w-5/12 2xl:w-[45%];
 }
 
 /* .grid-text {
@@ -135,7 +135,7 @@ header {
   @apply flex-col-reverse md:flex-row-reverse;
 }
 .grid-img {
-  @apply h-[271px] md:h-[40.625rem] w-full md:w-[35%] lg:w-7/12 py-[12rem];
+  @apply h-[271px]  md:h-[40.625rem] w-full md:w-[35%] lg:h-[650px] lg:w-7/12 2xl:w-[55%] py-[12rem];
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -212,11 +212,11 @@ header {
 }
 
 footer {
-  @apply bg-[var(--black)] grid place-items-center lg:h-[250px] text-white w-full;
+  @apply bg-[var(--black)] py-10 grid place-items-center lg:min-h-[250px] text-white w-full;
 }
 
 footer .footer-main-wrapper {
-  @apply py-10 grid w-[80%] 2xl:w-[75%] md:flex md:relative md:justify-between lg:flex lg:justify-between;
+  @apply grid w-[80%]  2xl:w-[75%] bg-[var(--black)] md:flex md:relative md:justify-between lg:flex lg:justify-between;
 }
 
 .footer-main-content {
@@ -255,20 +255,24 @@ footer .footer-main-wrapper {
 /* STORIES */
 
 .stories-hero-img {
-  @apply lg:h-[93vh] md:min-h-[650px];
-  background: url(../public/assets/stories/desktop/moon-of-appalacia.jpg);
-  background-position: center;
+  @apply h-[317px]  bg-[url('../public/assets/stories/tablet/moon-of-appalacia.jpg')] md:bg-[url('../public/assets/stories/desktop/moon-of-appalacia.jpg')]  md:min-h-[650px] lg:h-[650px]  lg:bg-[url('../public/assets/stories/desktop/moon-of-appalacia.jpg')] bg-center bg-no-repeat bg-cover;
+  /* background: url(../public/assets/stories/desktop/moon-of-appalacia.jpg); */
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.stories-hero-mobile {
+  @apply grid md:hidden;
 }
 
 .stories-hero-overlay {
-  @apply h-[100vh] relative;
+  @apply h-[317px]  md:min-h-[650px] lg:h-[650px]   relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .stories-hero-content-wrapper {
-  @apply text-white absolute top-[10rem] p-4 md:w-2/3 md:p-5 lg:w-1/2 lg:pl-[8rem] grid gap-4;
+  @apply hidden text-white absolute top-[10rem] p-4 md:grid md:w-2/3 md:pl-[4rem] md:p-5 lg:w-1/2 lg:pl-[8rem] gap-4;
 }
 
 .stories-hero-content-wrapper h5 {
@@ -291,5 +295,11 @@ footer .footer-main-wrapper {
 }
 
 .stories-hero-content-wrapper .description {
-  @apply opacity-60 text-[15px] leading-[25px] lg:pr-16 2xl:pr-[9rem];
+  @apply opacity-60 text-[15px] leading-[25px] md:w-[77%] lg:min-w-[65%] 2xl:min-w-[75%]  2xl:pr-[9rem];
+}
+
+/* FEATURES */
+
+.features-hero {
+  @apply bg-[url('../public/assets/features/desktop/hero.jpg')];
 }

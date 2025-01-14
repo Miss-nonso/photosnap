@@ -2,7 +2,14 @@ import React from "react";
 
 import TextLink from "./TextLink";
 
-const TextContainer = ({ heading, paraText, linkText, linkHref, bgcolor }) => {
+const TextContainer = ({
+  heading,
+  paraText,
+  linkText,
+  linkHref,
+  bgcolor,
+  showTextLink
+}) => {
   return (
     <div className={`grid-text ${bgcolor === "white" && "grid-text-white"}`}>
       <div className="grid-text-content">
@@ -15,10 +22,13 @@ const TextContainer = ({ heading, paraText, linkText, linkHref, bgcolor }) => {
           }}
           className="text-[2.5rem]"
         >
-          {heading[0]} <br /> {heading[1]} <br /> {heading[2] ? heading[2] : ""}{" "}
+          {heading[0]} <br /> {heading[1] ? heading[1] : ""} <br />{" "}
+          {heading[2] ? heading[2] : ""}{" "}
         </h2>
         <p>{paraText}</p>
-        <TextLink linkText={linkText} href={linkHref} bgcolor={bgcolor} />
+        {showTextLink && (
+          <TextLink linkText={linkText} href={linkHref} bgcolor={bgcolor} />
+        )}
       </div>
     </div>
   );

@@ -51,6 +51,7 @@ const HomeLayout = () => {
               linkText={linkText}
               linkHref={linkHref}
               bgcolor={index !== 0 ? "white" : "bleck"}
+              showTextLink={true}
             />
             <ImgContainer imgClassname={imgClassname} />
           </div>
