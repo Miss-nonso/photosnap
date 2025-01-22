@@ -452,7 +452,7 @@ footer .footer-main-wrapper {
 }
 
 .features-section {
-  @apply hidden md:block mb-32;
+  @apply hidden md:block mb-20;
 }
 .features-section h4 {
   @apply text-center text-[2.5rem] tracking-[4.17px] font-bold mb-6;
