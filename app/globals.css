@@ -155,14 +155,14 @@ header {
 
 .home-img1 {
   @apply sm:h-[294px];
-  background: url(../public/assets/home/desktop/create-and-share.jpg);
+  background: url(./public/assets/home/desktop/create-and-share.jpg);
 }
 
 .home-img2 {
-  background: url(../public/assets/home/desktop/beautiful-stories.jpg);
+  background: url(./public/assets/home/desktop/beautiful-stories.jpg);
 }
 .home-img3 {
-  background: url(../public/assets/home/desktop/designed-for-everyone.jpg);
+  background: url(./public/assets/home/desktop/designed-for-everyone.jpg);
 }
 
 .home-grid-layout {
