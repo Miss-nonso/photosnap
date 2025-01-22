@@ -39,6 +39,7 @@ body {
     --white: #fff;
     ---lightGrey: #dfdfdf;
     --overlayGrey: #979797;
+    --grey: #f5f5f5;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -78,11 +79,15 @@ body {
 }
 
 header {
-  @apply flex justify-between items-center p-4 px-8 h-[4.5rem] w-full bg-white md:px-[4.1rem] md:justify-between;
+  @apply flex justify-between items-center p-4 px-8 fixed top-0 left-0 right-0 z-[1000] h-[4.5rem] w-full bg-white md:px-[4.1rem] md:justify-between;
 }
 
-.mobile-menu-trigger {
-  @apply md:hidden;
+.hamburger-wrapper {
+  @apply md:hidden transition-all duration-300 ease-in-out;
+}
+
+.mobile-menu-close {
+  @apply h-[30.85px] transition-all duration-300 ease-in-out;
 }
 
 .nav-menu,
@@ -90,6 +95,39 @@ header {
   @apply hidden md:flex;
 }
 
+.mobileNav {
+  @apply block bg-white absolute top-[4.5rem] z-[1000] min-h-[253px] left-0 right-0 transition-all ease-in-out duration-1000 pb-4 -translate-y-5 space-y-0 md:hidden;
+}
+
+.mobileNav #myLinks {
+  @apply grid place-items-center text-[15px] mx-auto uppercase tracking-[2.5px] font-bold pt-12 pb-4  w-[90%];
+}
+
+.mobileNav a {
+  @apply text-black py-[14px] px-[16px] no-underline text-[17px] block;
+}
+
+.mobileNav a:hover {
+  @apply tracking-[2.7px];
+}
+
+.btn-white {
+  @apply bg-white text-black;
+}
+
+.nav-invite-btn {
+  @apply flex justify-center py-6 pb-4 mx-auto border-t w-[80%] border-t-black;
+}
+.nav-invite-btn button {
+  @apply w-full h-[3rem] py-2;
+}
+.btn {
+  @apply w-full h-[3rem] py-2;
+}
+
+.btn-wrapper {
+  @apply flex justify-center py-6 pb-4 mx-auto w-[80%];
+}
 .arr-link {
   @apply flex gap-4 uppercase tracking-[2px] text-[12px] items-center;
 }
@@ -185,11 +223,19 @@ header {
 }
 
 .info-content {
-  @apply grid py-20 gap-[4rem]  items-center justify-center md:gap-[4rem]  text-center min-h-[236px] lg:flex lg:w-[80%] lg:gap-[2rem] 2xl:w-[75%] 2xl:gap-0 2xl:justify-between;
+  @apply grid py-20 gap-[4rem] grid-cols-1 place-items-center md:gap-[4rem]  text-center min-h-[236px] lg:grid lg:w-[80%] lg:grid-cols-3 lg:gap-[2rem] 2xl:w-[80%] 2xl:gap-0 2xl:justify-between;
+}
+
+.features-info-section {
+  @apply md:py-8;
+}
+
+.features-info-section .info-section .info-content {
+  @apply md:grid-cols-2 lg:grid-cols-3 md:gap-y-[6rem];
 }
 
 .info-content .info-item {
-  @apply grid place-items-center gap-0 md:gap-4 min-h-[236px];
+  @apply grid place-items-center lg:w-full gap-0 md:gap-4 min-h-[236px];
 }
 
 .info-item .info-img-wrapper {
@@ -303,3 +349,152 @@ footer .footer-main-wrapper {
 .features-hero {
   @apply bg-[url('../public/assets/features/desktop/hero.jpg')];
 }
+
+.invite-section {
+  @apply bg-[url('../public/assets/features/desktop/Bitmap.png')] min-h-[280px] text-white grid place-items-center;
+}
+
+.invite-section .invite-content {
+  @apply grid place-items-start p-8 md:flex md:justify-between md:items-center md:w-[85%] lg:w-[85%] 2xl:w-[79%] h-[100%];
+}
+
+.invite-section h3 {
+  @apply text-[2rem] uppercase tracking-[3.33px] leading-[40px];
+}
+
+/* PRICING */
+
+.pricing-hero {
+  @apply bg-[url('../public/assets/pricing/desktop/hero.jpg')];
+}
+
+.pricing-section {
+  @apply py-20;
+}
+
+.pricing-toggle {
+  @apply flex items-center gap-2 justify-center py-6;
+}
+
+.pricing-toggle .toggle-text {
+  @apply text-[18px] text-black font-bold opacity-50 transition-all duration-300 ease-in-out;
+}
+.pricing-toggle .active {
+  @apply opacity-100;
+}
+
+.toggle-wrapper {
+  @apply bg-[var(--overlayGrey)] w-[4rem] h-[2rem] rounded-2xl flex items-center p-0.5 cursor-pointer transition-all duration-300 ease-in-out;
+}
+
+.toggled {
+  @apply justify-end bg-black;
+}
+
+.toggled .toggle-btn {
+  @apply bg-white;
+}
+
+.toggle-btn {
+  @apply h-[1.5rem] bg-black aspect-square rounded-full;
+}
+
+.plans-container {
+  @apply grid md:grid-cols-1 gap-8 place-items-center p-4 mx-auto text-center lg:w-[80%] lg:grid-cols-3;
+}
+
+.card {
+  @apply bg-[var(--grey)] grid gap-2 p-4 lg:h-[407px] transition-all duration-1000 ease-linear;
+}
+
+.pro-card {
+  @apply pt-1.5 bg-gradient-to-tr from-[#FFC593] via-[#BC7198] to-[#5A77FF] md:pl-1.5 md:pt-0 lg:pt-1.5 lg:pl-0 lg:h-[470px];
+}
+
+.pro-card .card {
+  @apply bg-black text-white h-full;
+}
+
+.card h5 {
+  @apply text-[1.5rem] font-bold;
+}
+.card p {
+  @apply text-[15px] opacity-60 leading-[25px];
+}
+
+.card h6 {
+  @apply text-[40px] font-bold;
+}
+
+.pricing-comparison {
+  @apply w-full md:px-16 lg:w-[55%] mx-auto;
+}
+
+.pricing-table-headers {
+  @apply border-b border-b-black;
+}
+
+.pricing-table th,
+.pricing-table td {
+  @apply text-left uppercase text-[12px] tracking-[2px] font-bold;
+}
+
+.pricing-table-row {
+  @apply border-b border-gray-300 text-left uppercase;
+}
+
+.check-container {
+  @apply pl-6 text-center;
+}
+
+.check-container:last-child {
+  @apply pl-8;
+}
+
+.features-section {
+  @apply hidden md:block mb-32;
+}
+.features-section h4 {
+  @apply text-center text-[2.5rem] tracking-[4.17px] font-bold mb-6;
+}
+
+.mobile-features-section {
+  @apply pb-12 md:hidden;
+}
+
+.mobile-features-heading,
+.mobile-features-content {
+  @apply px-8;
+}
+
+.mobile-features-item h6 {
+  @apply text-[12px] font-bold tracking-[2px] py-4;
+}
+
+.mobile-features-heading h5 {
+  @apply border-b border-b-black py-4 text-[12px] font-bold tracking-[2px];
+}
+
+.mobile-features-item {
+  @apply py-4  border-b;
+}
+.mobile-features-checkmark-wrapper {
+  @apply flex justify-between pr-10;
+}
+
+.mobile-features-checkmark-wrapper .item {
+  @apply grid gap-2;
+}
+
+.mobile-features-checkmark-wrapper p {
+  @apply opacity-50 text-[10px] font-bold tracking-[1.67px];
+}
+
+.mobile-features-checkmark-wrapper .checkmark {
+  @apply text-black font-bold;
+}
+
+/* .active {
+  background-color: text;
+  color: white;
+} */

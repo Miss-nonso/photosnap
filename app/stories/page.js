@@ -9,8 +9,11 @@ const Stories = () => {
   return (
     <>
       <Navbar />
-      <StoriesHero />
-      <ImageGrid imageData={imageGridData} />
+      <main className="flex flex-col mt-[4.5rem]">
+        <StoriesHero />
+        <ImageGrid imageData={imageGridData} />
+      </main>
+
       <Footer />
     </>
   );
