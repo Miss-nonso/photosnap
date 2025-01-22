@@ -6,7 +6,8 @@ const StoriesHero = () => {
   return (
     <>
       {" "}
-      <div className="stories-hero-img">
+      <div className="stories-hero-img  h-[317px]  bg-[url('../public/assets/stories/tablet/moon-of-appalacia.jpg')] md:bg-[url('../public/assets/stories/desktop/moon-of-appalacia.jpg')]  md:min-h-[650px] lg:h-[650px]  lg:bg-[url('../../assets/stories/desktop/moon-of-appalacia.jpg')] bg-center bg-no-repeat bg-cover">
+        {/* <img src="" alt="" /> */}
         <div className="stories-hero-overlay"></div>
         {/* <div className=""> */}{" "}
         {storiesHeroData.map(
@@ -40,27 +41,6 @@ const StoriesHero = () => {
           <p>{storiesHeroData[0].description}</p>
           <TextLink linkText="READ THE STORY" href="#" bgcolor="black" />
         </div>
-        {/* 
-        <div className="grid-text stories-hero-mobile">
-          <h2
-            style={{
-              textTransform: "uppercase",
-              fontWeight: "800",
-              letterSpacing: "4.17px",
-              lineHeight: "48px"
-            }}
-          >
-            {" "}
-            {storiesHeroData[0].subHeading}
-          </h2>
-          <h1> {storiesHeroData[0].heading}</h1>
-          <div className="date-and-author">
-            <p> {storiesHeroData[0].date}</p>{" "}
-            <span className="author">by {storiesHeroData[0].author}</span>
-          </div>
-          <p className="description">{storiesHeroData[0].description}</p>
-          <TextLink linkText="READ THE STORY" href="#" bgcolor="black" />
-        </div> */}
       </div>
     </>
   );

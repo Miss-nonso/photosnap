@@ -148,22 +148,17 @@ header {
   @apply bg-black text-[var(--white)] grid place-content-center px-8 py-20 w-[100%] md:w-[65%] lg:w-5/12 2xl:w-[45%];
 }
 
-/* .grid-text {
-  width: 42.36%;
- 
-  } */
-
-.home-img1 {
+/* .home-img1 {
   @apply sm:h-[294px];
-  background: url(./public/assets/home/desktop/create-and-share.jpg);
+  background: url(../public/assets/home/desktop/create-and-share.jpg);
 }
 
 .home-img2 {
-  background: url(./public/assets/home/desktop/beautiful-stories.jpg);
+  background: url(../public/assets/home/desktop/beautiful-stories.jpg);
 }
 .home-img3 {
-  background: url(./public/assets/home/desktop/designed-for-everyone.jpg);
-}
+  background: url(../public/assets/home/desktop/designed-for-everyone.jpg);
+} */
 
 .home-grid-layout {
   @apply flex flex-col-reverse md:flex-row md:flex lg:flex;
@@ -173,10 +168,14 @@ header {
   @apply flex-col-reverse md:flex-row-reverse;
 }
 .grid-img {
-  @apply h-[271px]  md:h-[40.625rem] w-full md:w-[35%] lg:h-[650px] lg:w-7/12 2xl:w-[55%] py-[12rem];
-  background-position: center;
+  @apply min-h-[271px]  md:h-[40.625rem] w-full md:w-[35%] lg:h-[650px] lg:w-7/12 2xl:w-[55%];
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.grid-img img {
+  @apply w-full h-[100%] object-cover;
 }
 
 .grid-text-content {
@@ -300,13 +299,10 @@ footer .footer-main-wrapper {
 
 /* STORIES */
 
-.stories-hero-img {
+/* .stories-hero-img {
   @apply h-[317px]  bg-[url('../public/assets/stories/tablet/moon-of-appalacia.jpg')] md:bg-[url('../public/assets/stories/desktop/moon-of-appalacia.jpg')]  md:min-h-[650px] lg:h-[650px]  lg:bg-[url('../public/assets/stories/desktop/moon-of-appalacia.jpg')] bg-center bg-no-repeat bg-cover;
-  /* background: url(../public/assets/stories/desktop/moon-of-appalacia.jpg); */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
+
+} */
 
 .stories-hero-mobile {
   @apply grid md:hidden;
