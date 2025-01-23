@@ -87,7 +87,7 @@ header {
 }
 
 .mobile-menu-close {
-  @apply h-[30.85px];
+  /* @apply h-[30.85px]; */
 }
 
 .nav-menu,
