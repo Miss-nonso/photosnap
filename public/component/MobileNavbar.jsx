@@ -10,10 +10,10 @@ const MobileNavbar = () => {
       initial={{ opacity: 0, y: -1 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.9,
+        duration: 0.5,
+        type: "spring",
         // delay: 0.000,
-        // ease: "easeOut"
-        ease: "easeIn"
+        ease: "easeOut"
       }}
     >
       <div id="myLinks">
