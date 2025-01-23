@@ -40,24 +40,26 @@ const HomeLayout = () => {
         width: "100%"
       }}
     >
-      {homeData.map(({ heading, paraText, linkText, linkHref, img }, index) => (
-        <div
-          className={`home-grid-layout  ${
-            index % 2 !== 0 && "home-layout-reverse"
-          }`}
-          key={paraText}
-        >
-          <TextContainer
-            heading={heading}
-            paraText={paraText}
-            linkText={linkText}
-            linkHref={linkHref}
-            bgcolor={index !== 0 ? "white" : "bleck"}
-            showTextLink={true}
-          />
-          <ImgContainer img={img} />
-        </div>
-      ))}
+      {homeData.map(
+        ({ heading, paraText, linkText, linkHref, imgClassname }, index) => (
+          <div
+            className={`home-grid-layout  ${
+              index % 2 !== 0 && "home-layout-reverse"
+            }`}
+            key={paraText}
+          >
+            <TextContainer
+              heading={heading}
+              paraText={paraText}
+              linkText={linkText}
+              linkHref={linkHref}
+              bgcolor={index !== 0 ? "white" : "bleck"}
+              showTextLink={true}
+            />
+            <ImgContainer imgClassname={imgClassname} />
+          </div>
+        )
+      )}
     </div>
   );
 };

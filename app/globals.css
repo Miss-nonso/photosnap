@@ -4,8 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "DM Sans", serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -148,17 +156,17 @@ header {
   @apply bg-black text-[var(--white)] grid place-content-center px-8 py-20 w-[100%] md:w-[65%] lg:w-5/12 2xl:w-[45%];
 }
 
-/* .home-img1 {
+.home-img1 {
   @apply sm:h-[294px];
-  background: url(../public/assets/home/desktop/create-and-share.jpg);
+  background: url(/assets/home/desktop/create-and-share.jpg);
 }
 
 .home-img2 {
-  background: url(../public/assets/home/desktop/beautiful-stories.jpg);
+  background: url(/assets/home/desktop/beautiful-stories.jpg);
 }
 .home-img3 {
-  background: url(../public/assets/home/desktop/designed-for-everyone.jpg);
-} */
+  background: url(/assets/home/desktop/designed-for-everyone.jpg);
+}
 
 .home-grid-layout {
   @apply flex flex-col-reverse md:flex-row md:flex lg:flex;
@@ -169,9 +177,9 @@ header {
 }
 .grid-img {
   @apply min-h-[271px]  md:h-[40.625rem] w-full md:w-[35%] lg:h-[650px] lg:w-7/12 2xl:w-[55%];
-  /* background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .grid-img img {
@@ -188,7 +196,7 @@ header {
   @apply text-[15px] leading-[25px] md:pr-0 opacity-60;
 }
 .img-wrapper {
-  @apply relative;
+  @apply relative cursor-pointer;
 }
 
 .img-overlay {
@@ -346,7 +354,7 @@ footer .footer-main-wrapper {
 }
 
 .invite-section {
-  @apply bg-[url('../public/assets/features/desktop/Bitmap.png')] min-h-[280px] text-white grid place-items-center;
+  @apply bg-[url('/assets/features/desktop/Bitmap.png')] min-h-[280px] text-white grid place-items-center;
 }
 
 .invite-section .invite-content {
@@ -360,7 +368,7 @@ footer .footer-main-wrapper {
 /* PRICING */
 
 .pricing-hero {
-  @apply bg-[url('../public/assets/pricing/desktop/hero.jpg')];
+  @apply bg-[url('/assets/pricing/desktop/hero.jpg')];
 }
 
 .pricing-section {

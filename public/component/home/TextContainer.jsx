@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
 
+import React from "react";
 import TextLink from "./TextLink";
+import { motion } from "framer-motion";
 
 const TextContainer = ({
   heading,
@@ -12,7 +14,16 @@ const TextContainer = ({
 }) => {
   return (
     <div className={`grid-text ${bgcolor === "white" && "grid-text-white"}`}>
-      <div className="grid-text-content">
+      <motion.div
+        className="grid-text-content"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.001,
+          ease: "easeOut"
+        }}
+      >
         <h2
           style={{
             textTransform: "uppercase",
@@ -29,7 +40,7 @@ const TextContainer = ({
         {showTextLink && (
           <TextLink linkText={linkText} href={linkHref} bgcolor={bgcolor} />
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

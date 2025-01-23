@@ -5,6 +5,7 @@ import PricingToggle from "./PricingToggle";
 import Card from "../Card";
 import { monthlyPricingPlans } from "@/public/assets/data/pricingData";
 import { yearlyPricingPlans } from "@/public/assets/data/pricingData";
+import { motion } from "framer-motion";
 
 const PricingPlan = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -23,7 +24,16 @@ const PricingPlan = () => {
         </div>
         <p className={`toggle-text ${isToggled && "active"}`}>Yearly</p>
       </div>
-      <div className="plans-container">
+      <motion.div
+        className="plans-container"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.001,
+          ease: "easeOut"
+        }}
+      >
         {isToggled
           ? yearlyPricingPlans.map((plan, index) =>
               index === 1 ? (
@@ -43,7 +53,7 @@ const PricingPlan = () => {
                 <Card plan={plan} key={plan.amount} duration="monthly" />
               )
             )}
-      </div>
+      </motion.div>
     </div>
   );
 };

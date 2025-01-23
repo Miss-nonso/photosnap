@@ -1,9 +1,21 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const TextLink = ({ linkText, href, bgcolor }) => {
   return (
-    <Link href={href} className="arr-link">
+    <motion.a
+      href={href}
+      className="arr-link"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.009,
+        ease: "easeOut"
+      }}
+    >
       {linkText}
       <span>
         <svg
@@ -24,7 +36,7 @@ const TextLink = ({ linkText, href, bgcolor }) => {
           />
         </svg>
       </span>
-    </Link>
+    </motion.a>
   );
 };
 
