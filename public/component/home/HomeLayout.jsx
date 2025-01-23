@@ -17,7 +17,7 @@ const homeData = [
     paraText:
       "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
     linkText: "VIEW THE STORIES",
-    linkHref: "#",
+    linkHref: "/stories",
     img: "../../assets/home/desktop/beautiful-stories.jpg",
     imgClassname: "home-img2"
   },
@@ -26,7 +26,7 @@ const homeData = [
     paraText:
       "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.",
     linkText: "VIEW THE STORIES",
-    linkHref: "#",
+    linkHref: "/stories",
     img: "../../assets/home/desktop/designed-for-everyone.jpg",
     imgClassname: "home-img3"
   }
