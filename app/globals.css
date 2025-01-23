@@ -350,7 +350,7 @@ footer .footer-main-wrapper {
 /* FEATURES */
 
 .features-hero {
-  @apply bg-[url('../public/assets/features/desktop/hero.jpg')];
+  @apply bg-[url('/assets/features/desktop/hero.jpg')];
 }
 
 .invite-section {
