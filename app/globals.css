@@ -83,11 +83,11 @@ header {
 }
 
 .hamburger-wrapper {
-  @apply md:hidden transition-all duration-300 ease-in-out;
+  @apply md:hidden;
 }
 
 .mobile-menu-close {
-  @apply h-[30.85px] transition-all duration-300 ease-in-out;
+  @apply h-[30.85px];
 }
 
 .nav-menu,
