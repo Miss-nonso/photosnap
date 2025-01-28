@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 // };
 
 export const metadata = {
-  title: "Photosnap - Capture Life’s Best Moments",
+  title: "Photosnap - Capture Your Story",
   description:
-    "Photosnap is the premier platform for showcasing your photography. Join our community of creators and explore stunning visuals.",
-  image: "/assets/home/desktop/create-and-share.jpg",
+    "Photosnap makes storytelling easy with stunning photo features for everyone. Discover, create, and share your stories today.",
+  image: "/favicon.ico",
   url: "https://perfecto-photosnap.netlify.app/",
 
   openGraph: {
@@ -29,10 +29,7 @@ export const metadata = {
     description:
       "Photosnap makes storytelling easy with stunning photo features for everyone. Discover, create, and share your stories today.",
     url: "https://perfecto-photosnap.netlify.app/",
-    images: [
-      "/assets/home/desktop/create-and-share.jpg",
-      "/assets/home/desktop/beautiful-stories.jpg"
-    ]
+    images: ["/favicon.ico"]
   },
   twitter: {
     card: "/assets/home/desktop/create-and-share.jpg",
