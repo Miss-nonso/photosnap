@@ -139,29 +139,53 @@ export const infoSectionData = [
 export const socialIcons = [
   {
     icon: "../assets/shared/desktop/facebook.svg",
-    href: "#"
+    href: "https://facebook.com/"
   },
   {
     icon: "../assets/shared/desktop/youtube.svg",
-    href: "#"
+    href: "https://youtube.com/"
   },
   {
     icon: "../assets/shared/desktop/twitter.svg",
-    href: "#"
+    href: "https://x.com/"
   },
   {
     icon: "../assets/shared/desktop/pinterest.svg",
-    href: "#"
+    href: "https://pinterest.com/"
   },
   {
     icon: "../assets/shared/desktop/instagram.svg",
-    href: "#"
+    href: "https://instagram.com/"
   }
 ];
 
 export const footerLinks = [
-  { text: "HOME", href: "#" },
-  { text: "STORIES", href: "#" },
-  { text: "FEATURES", href: "#" },
-  { text: "PRICING", href: "#" }
+  { text: "HOME", href: "/" },
+  { text: "STORIES", href: "/stories" },
+  { text: "FEATURES", href: "/features" },
+  { text: "PRICING", href: "/pricing" }
 ];
+
+// function double(num1, num2) {
+//   let str1 = num1.toString();
+//   let str2 = num2.toString();
+
+//   let res = [];
+//   let i = 0;
+//   let j = str2.length - 2;
+
+//   while (i < str1.length && j > 2) {
+// console.log(str1[i] === str1[i + 1] && str1[i] === str1[i + 2] );
+
+//     if (str1[i] === str1[i + 1] && str1[i] === str1[i + 2]) {
+//       res.push(str1[i], str1[i + 1], str1[i + 2]);
+
+//     }
+
+//     i++;
+//     j--;
+//   }
+//   return res;
+// }
+
+// console.log(double(47776544432, 123443555));

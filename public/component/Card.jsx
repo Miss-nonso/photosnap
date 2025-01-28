@@ -13,7 +13,10 @@ const Card = ({ plan, duration }) => {
       </div>
       <div className="btn-wrapper">
         {" "}
-        <Button className={`btn ${plan.type === "Pro" ? "btn-white" : ""}`}>
+        <Button
+          className={`btn ${plan.type === "Pro" ? "btn-white" : ""}`}
+          id={`${plan.type === "Pro" ? "btn-white" : ""}`}
+        >
           PICK PLAN
         </Button>
       </div>

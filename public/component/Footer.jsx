@@ -23,10 +23,13 @@ const Footer = () => {
           </div>
           <ul>
             {footerLinks.map(({ text, href }, index) => (
-              <Link href={href} key={index}>
+              <li key={index}>
                 {" "}
-                <li>{text}</li>{" "}
-              </Link>
+                <Link href={href} className="hover:underline">
+                  {" "}
+                  {text}{" "}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>

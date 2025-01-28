@@ -14,15 +14,45 @@ import {
 import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
 import MobileNavbar from "./MobileNavbar";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const menuRef = useRef(null);
+
+  // useEffect(() => {
+  //   const handleOutsideClick = (event) => {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setMobileMenu(false);
+  //     }
+  //   };
+
+  //   // Add event listener for document click
+  //   document.addEventListener("mousedown", handleOutsideClick);
+
+  //   return () => {
+  //     // Clean up event listener on unmount
+  //     document.removeEventListener("mousedown", handleOutsideClick);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setMobileMenu(false);
+    };
+
+    // Close menu on scroll
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="flex justify-between w-100 align-middle bg-black ">
+    <header className="flex justify-between w-100 align-middle bg-black">
       <Logo color="black" />
       <NavigationMenu className="nav-menu">
-        {" "}
         <NavigationMenuItem style={{ listStyleType: "none" }}>
           <Link href="/stories" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -53,7 +83,6 @@ const Navbar = () => {
           setMobileMenu(!mobileMenu);
         }}
       >
-        {" "}
         {!mobileMenu ? (
           <img
             src="../hamburger.svg"
@@ -65,7 +94,12 @@ const Navbar = () => {
         )}
       </div>
 
-      {mobileMenu && <MobileNavbar />}
+      {/* Mobile Navbar */}
+      {mobileMenu && (
+        // <div ref={menuRef}>
+        <MobileNavbar />
+        // </div>
+      )}
     </header>
   );
 };

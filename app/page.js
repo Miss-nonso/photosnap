@@ -11,14 +11,14 @@ import { infoSectionData } from "@/public/assets/data/homeData";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
-      <main className="flex flex-col mt-[4.5rem]">
+      <main className="flex flex-col ">
         <HomeLayout />
         <ImageGrid imageData={imageGridData.slice(0, 4)} />
         <InfoSection infoSectionData={infoSectionData.slice(3)} />
         <Footer />
       </main>
-    </div>
+    </>
   );
 }

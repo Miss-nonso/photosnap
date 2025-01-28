@@ -20,8 +20,12 @@ const ImageGrid = ({ imageData }) => {
               }
             }}
             exit={{ scale: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 1, x: 5 }}
+            whileInView={{
+              opacity: 1,
+              scaleX: 1 + index * 0.001,
+              y: 0
+            }}
             transition={{
               duration: 0.8,
               delay: index * 0.002,

@@ -7,11 +7,34 @@ import Offerings from "@/public/component/pricing/Offerings";
 import Invite from "@/public/component/Invite";
 import Footer from "@/public/component/Footer";
 
+export const metadata = {
+  title: "Photosnap | Pricing - Choose the Perfect Plan",
+  description:
+    "Find the perfect plan for your storytelling needs. Photosnap offers flexible pricing for creators of all levels.",
+  image: "/assets/pricing/desktop/hero.jpg",
+  url: "https://perfecto-photosnap.netlify.app/pricing",
+
+  openGraph: {
+    title: "Photosnap | Pricing - Choose the Perfect Plan",
+    description:
+      "Find the perfect plan for your storytelling needs. Photosnap offers flexible pricing for creators of all levels.",
+    url: "https://perfecto-photosnap.netlify.app/pricing",
+    images: ["/assets/pricing/desktop/hero.jpg"]
+  },
+  twitter: {
+    card: "/assets/pricing/desktop/hero.jpg",
+    title: "Photosnap | Pricing - Choose the Perfect Plan",
+    description:
+      "Find the perfect plan for your storytelling needs. Photosnap offers flexible pricing for creators of all levels.",
+    images: ["/assets/pricing/desktop/hero.jpg"]
+  }
+};
+
 const Pricing = () => {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col mt-[4.5rem]">
+      <main className="flex flex-col ">
         {" "}
         <PricingHero />
         <PricingPlan />

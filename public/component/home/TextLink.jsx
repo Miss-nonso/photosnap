@@ -8,8 +8,8 @@ const TextLink = ({ linkText, href, bgcolor }) => {
     <motion.a
       href={href}
       className="arr-link"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
       transition={{
         duration: 0.8,
         delay: 0.009,
