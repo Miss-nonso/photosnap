@@ -8,7 +8,7 @@ const ImageGrid = ({ imageData }) => {
       {imageData.map(({ title, author, img }, index) => (
         <motion.div
           key={index}
-          className="img-wrapper"
+          className="img-wrapper group"
           animate={{
             scale: 1,
             transition: {
@@ -29,34 +29,31 @@ const ImageGrid = ({ imageData }) => {
             delay: index * 0.002,
             ease: "easeOut"
           }}
-          whileHover={{
-            scaleX: 1.025,
-            transition: { duration: 1, delayChildren: 200 }
-            // translate: -5
-          }}
           whileTap={{
-            scale: 0.99,
+            scale: 1.001,
             transition: { duration: 0.3, delayChildren: 100 }
           }}
         >
+          {/* Overlay */}
           <motion.div
-            className="img-overlay"
+            className="img-overlay "
             whileHover={{ opacity: 0.2 }}
           ></motion.div>
-          <motion.img
+
+          {/* Image */}
+          <img
             src={img}
             alt={title}
-            whileHover={{
-              // scaleX: 2,
-              transition: { duration: 0.5 }
-            }}
+            className="story-img group-hover:px-10  group-hover:scale-130"
           />
-          <div className="img-content">
+
+          {/* Content */}
+          <div className="img-content ">
             <div className="story-details">
-              <h6>{title}</h6>
-              <p className="author">by {author}</p>
+              <h6 className="">{title}</h6>
+              <p className="author ">by {author}</p>
             </div>
-            <Link href="#">
+            <Link href="#" className="">
               <p>READ STORY</p>
               <svg
                 width="42"
