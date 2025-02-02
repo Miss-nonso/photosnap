@@ -21,7 +21,8 @@ export const metadata = {
   title: "Photosnap - Capture Your Story",
   description:
     "Photosnap makes storytelling easy with stunning photo features for everyone. Discover, create, and share your stories today.",
-  image: "/favicon.ico",
+  image:
+    "https://perfecto-photosnap.netlify.app/assets/pricing/desktop/hero.jpg",
   url: "https://perfecto-photosnap.netlify.app/",
 
   openGraph: {
@@ -29,14 +30,16 @@ export const metadata = {
     description:
       "Photosnap makes storytelling easy with stunning photo features for everyone. Discover, create, and share your stories today.",
     url: "https://perfecto-photosnap.netlify.app/",
-    images: ["/favicon.ico"]
+    images: [
+      "https://perfecto-photosnap.netlify.app/assets/pricing/desktop/hero.jpg"
+    ]
   },
   twitter: {
     card: "/assets/home/desktop/create-and-share.jpg",
     title: "Photosnap - Capture Your Story",
     description:
       "Photosnap makes storytelling easy with stunning photo features for everyone. Discover, create, and share your stories today.",
-    images: ["/assets/home/desktop/create-and-share.jpg"]
+    images: ["/assets/pricing/desktop/hero.jpg"]
   }
 };
 

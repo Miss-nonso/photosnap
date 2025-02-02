@@ -9,7 +9,8 @@ export const metadata = {
   title: "Photosnap | Stories - Immersive Visual Narratives",
   description:
     "Dive into captivating stories told through breathtaking photography. Discover the world from a new perspective.",
-  image: "/assets/stories/desktop/moon-of-appalacia.jpg",
+  image:
+    "https://perfecto-photosnap.netlify.app/assets/stories/desktop/moon-of-appalacia.jpg",
   url: "https://perfecto-photosnap.netlify.app/stories",
 
   openGraph: {
@@ -17,7 +18,9 @@ export const metadata = {
     description:
       "Dive into captivating stories told through breathtaking photography. Discover the world from a new perspective.",
     url: "https://perfecto-photosnap.netlify.app/stories",
-    images: ["/assets/stories/desktop/moon-of-appalacia.jpg"]
+    images: [
+      "https://perfecto-photosnap.netlify.app/assets/stories/desktop/moon-of-appalacia.jpg"
+    ]
   },
   twitter: {
     card: "/assets/stories/desktop/moon-of-appalacia.jpg",

@@ -11,7 +11,7 @@ export const metadata = {
   title: "Photosnap | Pricing - Choose the Perfect Plan",
   description:
     "Find the perfect plan for your storytelling needs. Photosnap offers flexible pricing for creators of all levels.",
-  image: "/assets/pricing/desktop/hero.jpg",
+  image: "https://perfecto-photosnap.netlify.app/assets/pricing/desktop/hero.jpg",
   url: "https://perfecto-photosnap.netlify.app/pricing",
 
   openGraph: {
@@ -19,7 +19,7 @@ export const metadata = {
     description:
       "Find the perfect plan for your storytelling needs. Photosnap offers flexible pricing for creators of all levels.",
     url: "https://perfecto-photosnap.netlify.app/pricing",
-    images: ["/assets/pricing/desktop/hero.jpg"]
+    images: ["https://perfecto-photosnap.netlify.app/assets/pricing/desktop/hero.jpg"]
   },
   twitter: {
     card: "/assets/pricing/desktop/hero.jpg",

@@ -6,11 +6,14 @@ import { infoSectionData } from "@/public/assets/data/homeData";
 import Invite from "@/public/component/Invite";
 import Footer from "@/public/component/Footer";
 
+// https://perfecto-photosnap.netlify.app
+
 export const metadata = {
   title: "Photosnap | Features - Powerful Tools for Creators",
   description:
     "Photosnap's features make storytelling easy. Discover the tools that help creators share their vision with the world.",
-  image: "/assets/features/desktop/hero.jpg",
+  image:
+    "https://perfecto-photosnap.netlify.app/assets/features/desktop/hero.jpg",
   url: "https://perfecto-photosnap.netlify.app/features",
 
   openGraph: {
@@ -18,7 +21,9 @@ export const metadata = {
     description:
       "Photosnap's features make storytelling easy. Discover the tools that help creators share their vision with the world.",
     url: "https://perfecto-photosnap.netlify.app/features",
-    images: ["/assets/features/desktop/hero.jpg"]
+    images: [
+      "https://perfecto-photosnap.netlify.app/assets/features/desktop/hero.jpg"
+    ]
   },
   twitter: {
     card: "/assets/features/desktop/hero.jpg",
